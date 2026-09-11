@@ -1,0 +1,11 @@
+# robots.txt — Xdetron Precision Works
+# Replace the Sitemap host with your own domain before you go live.
+
+User-agent: *
+Allow: /
+
+# Nothing here needs to be crawled that is not already linked in the markup.
+# If you add an internal quotation dashboard later, disallow it here — and
+# protect it with authentication, not with robots.txt alone.
+
+Sitemap: https://www.xdetron.com/sitemap.xml

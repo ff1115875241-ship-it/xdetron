@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xdetron Precision Machining — Instant CNC Machining Quote</title>
+<meta name="description" content="Upload a 3D file and get an engineering-grade reference price for CNC machined parts in seconds — with a DFM read on what will cost you money. Turn-mill, 5-axis, sheet metal and EDM for export orders.">
+<link rel="canonical" href="https://www.xdetron.com/">
+
+<!-- Open Graph / Twitter — this is what a customer sees when they forward your link -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Xdetron Precision Machining">
+<meta property="og:title" content="Instant CNC Machining Quote — measured in your browser">
+<meta property="og:description" content="Drop an STL or OBJ and get a reference price in about eight seconds. Nothing is uploaded. An engineer confirms it within one working day.">
+<meta property="og:url" content="https://www.xdetron.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F4F5F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#08090B" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230E1116'/%3E%3Cpath d='M8 21V11l8 6 8-6v10' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&family=Manrope:wght@400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/components.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.xdetron.com/#org",
+      "name": "Wuxi Xdetron Technology Co., Ltd.",
+      "url": "https://www.xdetron.com/",
+      "description": "CNC machining, turn-mill, five-axis, sheet metal and EDM subcontracting for export orders, plus non-standard equipment built to drawing.",
+      "address": { "@type": "PostalAddress", "streetAddress": "No. 1015 Xinhong Road, Xinwu District", "addressLocality": "Wuxi", "addressRegion": "Jiangsu", "addressCountry": "CN" },
+      "email": "rfq@xdetron.com",
+      "telephone": "+8618051938829"
+    },
+    {
+      "@type": "Service",
+      "name": "CNC machining subcontracting",
+      "serviceType": "CNC machining, turn-mill, 5-axis milling, sheet metal, wire and sinker EDM",
+      "provider": { "@id": "https://www.xdetron.com/#org" },
+      "areaServed": "Worldwide",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "description": "Instant engineering reference price from an uploaded 3D model, confirmed by a manufacturing engineer within one working day."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body data-page-node-id="root">
+<a class="skip" href="#quote" data-en="Skip to the quote engine" data-zh="跳到报价引擎">Skip to the quote engine</a>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     NAV — glass, hairline appears on scroll, collapses to the essentials
+     ═══════════════════════════════════════════════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Xdetron Precision Machining — home">
+      <svg class="brand__mark" width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="1.2" y="1.2" width="29.6" height="29.6" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M8.5 21.5V11l7.5 5.6L23.5 11v10.5" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>
+        <span class="brand__name">Xdetron</span>
+        <span class="brand__sub" data-en="Precision Machining" data-zh="艾得创科技">Precision Machining</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Sections">
+      <a class="nav__link" href="#quote"         data-en="Instant quote" data-zh="在线报价">Instant quote</a>
+      <a class="nav__link" href="#capabilities"  data-en="Capabilities"  data-zh="工艺能力">Capabilities</a>
+      <a class="nav__link" href="#materials"     data-en="Materials"     data-zh="材料">Materials</a>
+      <a class="nav__link" href="#process"       data-en="How it runs"   data-zh="流程">How it runs</a>
+      <a class="nav__link" href="#quality"       data-en="Quality"       data-zh="品质">Quality</a>
+      <a class="nav__link" href="equipment.html" data-en="Equipment"     data-zh="设备定制">Equipment</a>
+      <a class="nav__link" href="#faq"           data-en="FAQ"           data-zh="常见问题">FAQ</a>
+    </nav>
+
+    <div class="nav__tools">
+      <div class="seg-mini" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+      <button class="icon-btn" id="themeBtn" type="button" aria-pressed="false" aria-label="Switch colour theme">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <g class="theme-sun">
+            <circle cx="12" cy="12" r="4.2"/>
+            <path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/>
+          </g>
+          <path class="theme-moon" d="M20.5 14.2A8.6 8.6 0 0 1 9.8 3.5a8.7 8.7 0 1 0 10.7 10.7z"/>
+        </svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="#quote" data-en="Get an instant price" data-zh="立即获取报价">Get an instant price</a>
+    </div>
+  </div>
+</header>
+
+<!-- Section rail — slides in once you are past the hero -->
+<nav class="subnav" id="subnav" aria-label="Page sections">
+  <div class="subnav__inner">
+    <a class="subnav__link" href="#quote"        data-en="Quote" data-zh="报价">Quote</a>
+    <a class="subnav__link" href="#capabilities" data-en="Capabilities" data-zh="工艺">Capabilities</a>
+    <a class="subnav__link" href="#materials"    data-en="Materials" data-zh="材料">Materials</a>
+    <a class="subnav__link" href="#process"      data-en="Process" data-zh="流程">Process</a>
+    <a class="subnav__link" href="#quality"      data-en="Quality" data-zh="品质">Quality</a>
+    <a class="subnav__link" href="#equipment"    data-en="Equipment" data-zh="设备">Equipment</a>
+    <a class="subnav__link" href="#faq"          data-en="FAQ" data-zh="问答">FAQ</a>
+    <a class="subnav__link" href="#rfq"          data-en="Contact" data-zh="联系">Contact</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     01 · HERO — one orchestrated entrance, then a drawing that draws itself
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="bloom" aria-hidden="true"></div>
+
+  <div class="shell shell--wide">
+    <div class="hero__grid">
+
+      <div class="hero__copy">
+        <div class="hero__eyebrow seq" style="--d:60ms">
+          <span class="chip"><span class="dot dot--live" style="color:var(--ok)"></span>
+            <span data-en="Engineering desk online" data-zh="工程师在线">Engineering desk online</span>
+          </span>
+          <span class="eyebrow" data-en="Wuxi, China · quoting across 6 time zones" data-zh="中国 · 无锡 · 覆盖 6 个时区报价">Wuxi, China · quoting across 6 time zones</span>
+        </div>
+
+        <h1 id="heroTitle">
+          <span class="seq-mask" style="--d:160ms"><span data-en="Tolerance is" data-zh="公差，就是">Tolerance is</span></span>
+          <span class="seq-mask" style="--d:250ms"><span><em data-en="the product." data-zh="产品本身。">the product.</em></span></span>
+        </h1>
+
+        <p class="hero__lede seq" style="--d:420ms">
+          <span data-en="Drop in a 3D file and get an engineering-grade reference price in about eight seconds — with a DFM read on the features that will cost you money. 3 a.m. included."
+                data-zh="拖入 3D 文件，约八秒拿到工程级参考价，并附一份告诉你「哪里最费钱」的 DFM 意见。凌晨三点也一样。">Drop in a 3D file and get an engineering-grade reference price in about eight seconds — with a DFM read on the features that will cost you money. 3 a.m. included.</span>
+        </p>
+
+        <div class="hero__cta seq" style="--d:520ms">
+          <a class="btn btn--primary btn--lg" href="#quote">
+            <span data-en="Get an instant price" data-zh="立即获取报价">Get an instant price</span>
+            <svg class="btn__arrow" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2.5 8h11M9 3.5L13.5 8 9 12.5"/>
+            </svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="equipment.html" data-en="Build a machine instead" data-zh="我要定制设备">Build a machine instead</a>
+        </div>
+
+        <p class="hero__note seq" style="--d:600ms">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 1.8l5 2.1v4c0 3.1-2.1 5.6-5 6.3-2.9-.7-5-3.2-5-6.3v-4z"/><path d="M5.9 8.1l1.5 1.5 3-3.2"/>
+          </svg>
+          <span data-en="Geometry is measured in your browser. Your file never leaves this page."
+                data-zh="几何数据在浏览器本地解析，文件不会离开这个页面。">Geometry is measured in your browser. Your file never leaves this page.</span>
+        </p>
+      </div>
+
+      <!-- The specimen: a real engineering drawing, hand-written in SVG, that
+           draws itself on load. Nothing here is a stock illustration. -->
+      <figure class="specimen" id="specimen">
+        <div class="specimen__bar">
+          <span class="specimen__title" data-en="Part specimen · illustrative" data-zh="零件样例 · 示意">Part specimen · illustrative</span>
+          <span class="chip chip--accent">AL 6061-T6</span>
+        </div>
+
+        <svg viewBox="0 0 520 300" role="img"
+             aria-label="Dimensioned engineering drawing of a machined mounting plate: 120 by 90 millimetres, 18 millimetres thick, with a central bore and four fixing holes.">
+          <defs>
+            <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="7" stroke="var(--ink-3)" stroke-width="0.8" opacity="0.6"/>
+            </pattern>
+            <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0.6 1.2 L9 5 L0.6 8.8 z" fill="var(--ink-3)"/>
+            </marker>
+          </defs>
+
+          <!-- ── Front view ── -->
+          <rect class="fill-soft" x="40" y="60" width="180" height="150" rx="14"/>
+          <rect class="ln draw" style="--len:700;--d:700ms" x="40" y="60" width="180" height="150" rx="14"/>
+          <circle class="ln draw" style="--len:224;--d:1020ms" cx="130" cy="135" r="34"/>
+          <circle class="ln ln--thin draw" style="--len:58;--d:1120ms" cx="62"  cy="82"  r="8.5"/>
+          <circle class="ln ln--thin draw" style="--len:58;--d:1180ms" cx="198" cy="82"  r="8.5"/>
+          <circle class="ln ln--thin draw" style="--len:58;--d:1240ms" cx="62"  cy="188" r="8.5"/>
+          <circle class="ln ln--thin draw" style="--len:58;--d:1300ms" cx="198" cy="188" r="8.5"/>
+
+          <g class="fade" style="--d:1150ms">
+            <line class="ln ln--axis" x1="26" y1="135" x2="234" y2="135"/>
+            <line class="ln ln--axis" x1="130" y1="46" x2="130" y2="224"/>
+          </g>
+
+          <g class="fade" style="--d:1360ms">
+            <line class="ln ln--dim" x1="40" y1="222" x2="40" y2="246"/>
+            <line class="ln ln--dim" x1="220" y1="222" x2="220" y2="246"/>
+            <line class="ln ln--dim" x1="40" y1="238" x2="220" y2="238" marker-start="url(#arw)" marker-end="url(#arw)"/>
+            <text class="txt-dim" x="130" y="258" text-anchor="middle">120</text>
+
+            <line class="ln ln--dim" x1="34" y1="60" x2="18" y2="60"/>
+            <line class="ln ln--dim" x1="34" y1="210" x2="18" y2="210"/>
+            <line class="ln ln--dim" x1="26" y1="60" x2="26" y2="210" marker-start="url(#arw)" marker-end="url(#arw)"/>
+            <text class="txt-dim" x="12" y="139" text-anchor="middle" transform="rotate(-90 12 139)">90</text>
+          </g>
+
+          <g class="fade" style="--d:1520ms">
+            <path class="ln ln--dim" d="M150 112 L198 84 L246 84"/>
+            <text class="txt-key" x="250" y="87">&#216;68 H7</text>
+            <path class="ln ln--dim" d="M206 88 L236 46 L272 46"/>
+            <text class="txt-key" x="276" y="49">&#216;17 &#215; 4</text>
+            <text class="txt-dim" x="130" y="278" text-anchor="middle">FRONT</text>
+          </g>
+
+          <!-- ── Side view ── -->
+          <g class="fade" style="--d:1440ms">
+            <rect class="fill-soft" x="300" y="60" width="48" height="150"/>
+            <rect class="ln"          x="300" y="60" width="48" height="150"/>
+            <line class="ln ln--hid"  x1="300" y1="101" x2="348" y2="101"/>
+            <line class="ln ln--hid"  x1="300" y1="169" x2="348" y2="169"/>
+            <line class="ln ln--axis" x1="292" y1="135" x2="358" y2="135"/>
+            <line class="ln ln--dim"  x1="300" y1="222" x2="300" y2="246"/>
+            <line class="ln ln--dim"  x1="348" y1="222" x2="348" y2="246"/>
+            <line class="ln ln--dim"  x1="300" y1="238" x2="348" y2="238" marker-start="url(#arw)" marker-end="url(#arw)"/>
+            <text class="txt-dim" x="324" y="258" text-anchor="middle">18</text>
+            <text class="txt-dim" x="324" y="278" text-anchor="middle">SIDE</text>
+          </g>
+
+          <!-- ── Section A–A: hatched cut, bore shown through ── -->
+          <g class="fade" style="--d:1560ms">
+            <rect class="fill-hatch" x="404" y="60" width="52" height="150" opacity="0.3"/>
+            <path class="ln" d="M404 60 H456 V92 H404 z"/>
+            <path class="ln" d="M404 178 H456 V210 H404 z"/>
+            <line class="ln" x1="404" y1="92"  x2="404" y2="178"/>
+            <line class="ln" x1="456" y1="92"  x2="456" y2="178"/>
+            <line class="ln ln--axis" x1="396" y1="135" x2="464" y2="135"/>
+            <text class="txt-dim" x="404" y="278" text-anchor="middle">SECTION</text>
+          </g>
+
+          <g class="fade" style="--d:1640ms">
+            <line class="ln ln--dim" x1="404" y1="38" x2="404" y2="52"/>
+            <line class="ln ln--dim" x1="456" y1="38" x2="456" y2="52"/>
+            <line class="ln ln--dim" x1="404" y1="45" x2="456" y2="45" marker-start="url(#arw)" marker-end="url(#arw)"/>
+            <text class="txt-key" x="430" y="30" text-anchor="middle">Ra 0.8</text>
+          </g>
+        </svg>
+
+        <span class="specimen__tag chip chip--ink">
+          <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.4 3.4L13.5 4"/></svg>
+          <span data-en="Measured, not uploaded" data-zh="本地实测，未上传">Measured, not uploaded</span>
+        </span>
+
+        <figcaption class="specimen__foot">
+          <span class="readout-cell">
+            <span class="readout-cell__k" data-en="Unit price · qty 10" data-zh="单件价 · 10 件">Unit price · qty 10</span>
+            <span class="readout-cell__v"><span class="count" data-to="41.80" data-dec="2">41.80</span><span class="readout-cell__u">USD</span></span>
+          </span>
+          <span class="readout-cell">
+            <span class="readout-cell__k" data-en="Machining cycle" data-zh="加工工时">Machining cycle</span>
+            <span class="readout-cell__v"><span class="count" data-to="6.4" data-dec="1">6.4</span><span class="readout-cell__u">min</span></span>
+          </span>
+          <span class="readout-cell">
+            <span class="readout-cell__k" data-en="Lead time" data-zh="交期">Lead time</span>
+            <span class="readout-cell__v">8&#8211;12<span class="readout-cell__u">days</span></span>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="stats stagger">
+      <div class="stat reveal">
+        <span class="stat__v"><span>&#177;</span><span class="count" data-to="0.005" data-dec="3">0.005</span><span>mm</span></span>
+        <span class="stat__k" data-en="Best achievable tolerance, five-axis" data-zh="五轴可稳定达到的最优公差">Best achievable tolerance, five-axis</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__v"><span class="count" data-to="8" data-dec="0">8</span><span>s</span></span>
+        <span class="stat__k" data-en="Typical time from drop to price" data-zh="从拖入文件到出价的典型耗时">Typical time from drop to price</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__v"><span class="count" data-to="120" data-dec="0">120</span><span>+</span></span>
+        <span class="stat__k" data-en="Materials and finishes on the shelf" data-zh="常备材料与表面处理种类">Materials and finishes on the shelf</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__v"><span class="count" data-to="48" data-dec="0">48</span><span>h</span></span>
+        <span class="stat__k" data-en="Fast-track lead time, when the shop has room" data-zh="加急交期（产能允许时）">Fast-track lead time, when the shop has room</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ticker — the shop, stated plainly -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span class="marquee__item">AL 6061-T6</span>
+    <span class="marquee__item">SUS 304 / 316L</span>
+    <span class="marquee__item">Ti-6Al-4V</span>
+    <span class="marquee__item">Brass H62</span>
+    <span class="marquee__item">PEEK</span>
+    <span class="marquee__item">5-axis simultaneous</span>
+    <span class="marquee__item">Turn-mill</span>
+    <span class="marquee__item">Wire EDM &#216;0.3</span>
+    <span class="marquee__item">Anodise Type II</span>
+    <span class="marquee__item">CMM inspection</span>
+    <span class="marquee__item">FOB / CIF</span>
+    <span class="marquee__item">AL 6061-T6</span>
+    <span class="marquee__item">SUS 304 / 316L</span>
+    <span class="marquee__item">Ti-6Al-4V</span>
+    <span class="marquee__item">Brass H62</span>
+    <span class="marquee__item">PEEK</span>
+    <span class="marquee__item">5-axis simultaneous</span>
+    <span class="marquee__item">Turn-mill</span>
+    <span class="marquee__item">Wire EDM &#216;0.3</span>
+    <span class="marquee__item">Anodise Type II</span>
+    <span class="marquee__item">CMM inspection</span>
+    <span class="marquee__item">FOB / CIF</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     02 · CONSOLE — the quote engine. Dark in both themes: this is the one
+     place the design wants a machine's screen rather than a page.
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="console s-dark" id="quote" aria-labelledby="quoteTitle">
+  <div class="shell shell--wide">
+
+    <div class="console__head">
+      <div class="stack">
+        <div class="sechead__top">
+          <span class="eyebrow" data-en="01 — Instant quote" data-zh="01 — 在线报价">01 — Instant quote</span>
+          <span class="sechead__rule"></span>
+          <span class="eyebrow mono" style="color:var(--accent-ink)" data-en="Cost model v1" data-zh="成本模型 v1">Cost model v1</span>
+        </div>
+        <h2 class="d2" id="quoteTitle" data-en="Price the part before you send the email."
+            data-zh="在发邮件之前，先把价格算出来。">Price the part before you send the email.</h2>
+      </div>
+      <div class="stack">
+        <p class="body" data-en="Every field below feeds a real cost model: blank volume, material removal rate, machine hour rate, set-up amortised across the batch, finishing priced by area, inspection by tolerance class. Nothing here is a random number."
+           data-zh="下面每个字段都进入一个真实的成本模型：毛坯体积、材料去除率、机时费率、按批量摊销的开机费、按面积计费的表面处理、按公差等级计费的检测。这里没有随机数。">Every field below feeds a real cost model: blank volume, material removal rate, machine hour rate, set-up amortised across the batch, finishing priced by area, inspection by tolerance class. Nothing here is a random number.</p>
+        <div class="console__badges">
+          <span class="chip"><span class="dot" style="color:var(--k-ok)"></span><span data-en="Runs locally" data-zh="本地运行">Runs locally</span></span>
+          <span class="chip"><span class="dot" style="color:var(--k-ok)"></span><span data-en="No file upload" data-zh="不上传文件">No file upload</span></span>
+          <span class="chip"><span class="dot" style="color:var(--k-warn)"></span><span data-en="Reference price, not an offer" data-zh="工程参考价，非要约">Reference price, not an offer</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="console__grid">
+
+      <!-- ── Inputs ───────────────────────────────────────────────────── -->
+      <form class="cfg" id="quoteForm" novalidate>
+
+        <fieldset class="fset">
+          <legend class="sr">Geometry</legend>
+          <div class="fset__head">
+            <span class="fset__num">01</span>
+            <span class="fset__title" data-en="Geometry" data-zh="几何">Geometry</span>
+            <span class="fset__hint" data-en="STL / OBJ measured here" data-zh="STL / OBJ 本地解析">STL / OBJ measured here</span>
+          </div>
+
+          <div class="seg" role="radiogroup" aria-label="Geometry input method">
+            <label><input type="radio" name="gio" value="upload" checked><span data-en="Upload 3D file" data-zh="上传 3D 文件">Upload 3D file</span></label>
+            <label><input type="radio" name="gio" value="dims"><span data-en="Type the dimensions" data-zh="手填外形尺寸">Type the dimensions</span></label>
+          </div>
+
+          <div id="paneUpload">
+            <div class="drop" id="drop">
+              <span class="drop__icon" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 22V6M10.5 11.5L16 6l5.5 5.5"/>
+                  <path d="M5 20v4.5A2.5 2.5 0 0 0 7.5 27h17a2.5 2.5 0 0 0 2.5-2.5V20"/>
+                </svg>
+              </span>
+              <span class="drop__title" data-en="Drop a 3D file here, or browse" data-zh="把 3D 文件拖到这里，或点击选择">Drop a 3D file here, or browse</span>
+              <span class="drop__meta" data-en="STL, OBJ, STEP and IGES are all measured and priced right in your browser — the file never leaves the page. STEP/IGES load a geometry kernel once (about 8 MB). DWG, DXF and PDF go to an engineer."
+                    data-zh="STL、OBJ、STEP、IGES 全部在你的浏览器内解析并即时报价 —— 文件不会离开本页。STEP/IGES 首次使用需加载几何内核（约 8 MB）。DWG、DXF、PDF 转工程师核价。">STL, OBJ, STEP and IGES are all measured and priced right in your browser — the file never leaves the page. STEP/IGES load a geometry kernel once (about 8 MB). DWG, DXF and PDF go to an engineer.</span>
+              <input type="file" id="fileInput" multiple
+                     aria-label="Choose a 3D file: STL, OBJ, STEP, IGES, DWG, DXF, PDF or a native CAD part"
+                     accept=".stl,.obj,.step,.stp,.iges,.igs,.brep,.dwg,.dxf,.pdf,.sldprt,.ipt">
+            </div>
+
+            <div class="progress" id="progWrap" hidden aria-hidden="true" style="margin-top:var(--sp-4)"><div class="progress__bar" id="progBar"></div></div>
+            <span class="drop__status" id="dropStatus" hidden></span>
+            <ul class="queue" id="queue" hidden style="margin-top:var(--sp-4)"></ul>
+            <p class="queue-note" id="queueNote" hidden style="margin-top:var(--sp-3)"
+               data-en="Queued files are priced by an engineer, usually within one working day. For an instant price, drop an STL or STEP file — or switch to typed dimensions."
+               data-zh="队列中的文件由工程师核价，通常一个工作日内回复。想立即看参考价，请拖入 STL 或 STEP 文件，或切换到「手填外形尺寸」。">Queued files are priced by an engineer, usually within one working day. For an instant price, drop an STL or STEP file — or switch to typed dimensions.</p>
+
+            <div class="measures" id="measures" hidden style="margin-top:var(--sp-4)">
+              <span class="measure"><span class="measure__k" data-en="Bounding box" data-zh="外形尺寸">Bounding box</span><span class="measure__v" id="mBbox">—</span></span>
+              <span class="measure"><span class="measure__k" data-en="Part volume" data-zh="零件体积">Part volume</span><span class="measure__v" id="mVol">—</span></span>
+              <span class="measure"><span class="measure__k" data-en="Surface area" data-zh="表面积">Surface area</span><span class="measure__v" id="mArea">—</span></span>
+              <span class="measure"><span class="measure__k" data-en="Triangles" data-zh="三角面数">Triangles</span><span class="measure__v" id="mTri">—</span></span>
+            </div>
+
+            <div class="field" style="margin-top:var(--sp-4)">
+              <span class="field__label">
+                <span data-en="File units" data-zh="文件单位">File units</span>
+                <span class="opt" data-en="STL carries no units — confirm against your model" data-zh="STL 不含单位，请对照模型确认">STL carries no units — confirm against your model</span>
+              </span>
+              <div class="seg" role="radiogroup" aria-label="File units">
+                <label><input type="radio" name="unit" value="mm" checked><span>mm</span></label>
+                <label><input type="radio" name="unit" value="cm"><span>cm</span></label>
+                <label><input type="radio" name="unit" value="in"><span>inch</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div id="paneDims" hidden>
+            <div class="grid-3">
+              <label class="field">
+                <span class="field__label"><span data-en="Length X" data-zh="长 X">Length X</span></span>
+                <span class="field__box"><input type="number" id="dimX" value="120" min="1" max="4000" step="0.1" inputmode="decimal"><span class="field__suffix">mm</span></span>
+                <span class="field__err" data-en="Enter a length between 1 and 4000 mm." data-zh="请输入 1–4000 mm 之间的长度。">Enter a length between 1 and 4000 mm.</span>
+              </label>
+              <label class="field">
+                <span class="field__label"><span data-en="Width Y" data-zh="宽 Y">Width Y</span></span>
+                <span class="field__box"><input type="number" id="dimY" value="90" min="1" max="4000" step="0.1" inputmode="decimal"><span class="field__suffix">mm</span></span>
+                <span class="field__err" data-en="Enter a width between 1 and 4000 mm." data-zh="请输入 1–4000 mm 之间的宽度。">Enter a width between 1 and 4000 mm.</span>
+              </label>
+              <label class="field">
+                <span class="field__label"><span data-en="Height Z" data-zh="高 Z">Height Z</span></span>
+                <span class="field__box"><input type="number" id="dimZ" value="18" min="0.5" max="4000" step="0.1" inputmode="decimal"><span class="field__suffix">mm</span></span>
+                <span class="field__err" data-en="Enter a height between 0.5 and 4000 mm." data-zh="请输入 0.5–4000 mm 之间的高度。">Enter a height between 0.5 and 4000 mm.</span>
+              </label>
+            </div>
+            <label class="field" style="margin-top:var(--sp-4)">
+              <span class="field__label">
+                <span data-en="Solid fill ratio" data-zh="实体占比">Solid fill ratio</span>
+                <span class="opt" data-en="How much of that box is actually metal?" data-zh="这个外形盒里有多少是实体金属？">How much of that box is actually metal?</span>
+              </span>
+              <span class="field__box"><input type="number" id="fillRatio" value="55" min="3" max="100" step="1" inputmode="decimal"><span class="field__suffix">%</span></span>
+            </label>
+            <p class="xs" style="margin-top:var(--sp-3)" data-en="No 3D file? The envelope plus a fill ratio is enough to size the blank honestly — and the quote says so."
+               data-zh="没有 3D 文件？给出外形尺寸和实体占比，就足以老实估算毛坯 —— 报价单上会注明这个前提。">No 3D file? The envelope plus a fill ratio is enough to size the blank honestly — and the quote says so.</p>
+          </div>
+        </fieldset>
+
+        <fieldset class="fset">
+          <legend class="sr">Process</legend>
+          <div class="fset__head">
+            <span class="fset__num">02</span>
+            <span class="fset__title" data-en="Process" data-zh="工艺">Process</span>
+            <span class="fset__hint" data-en="Rate table is ours, not a database" data-zh="费率表是我们自己的，不是抄来的">Rate table is ours, not a database</span>
+          </div>
+
+          <div class="picks" role="radiogroup" aria-label="Machining process">
+            <label class="pick"><input type="radio" name="process" value="cnc3" checked><span class="pick__code">CNC-01</span><span class="pick__name" data-en="3-axis milling" data-zh="三轴铣削">3-axis milling</span></label>
+            <label class="pick"><input type="radio" name="process" value="turn"><span class="pick__code">CNC-02</span><span class="pick__name" data-en="CNC turning" data-zh="CNC 车削">CNC turning</span></label>
+            <label class="pick"><input type="radio" name="process" value="tm"><span class="pick__code">CNC-03</span><span class="pick__name" data-en="Turn-mill" data-zh="车铣复合">Turn-mill</span></label>
+            <label class="pick"><input type="radio" name="process" value="cnc5"><span class="pick__code">CNC-04</span><span class="pick__name" data-en="5-axis simultaneous" data-zh="五轴联动">5-axis simultaneous</span></label>
+            <label class="pick"><input type="radio" name="process" value="laser"><span class="pick__code">SHT-05</span><span class="pick__name" data-en="Laser cutting" data-zh="激光切割">Laser cutting</span></label>
+            <label class="pick"><input type="radio" name="process" value="bend"><span class="pick__code">SHT-06</span><span class="pick__name" data-en="Sheet bending" data-zh="钣金折弯">Sheet bending</span></label>
+            <label class="pick"><input type="radio" name="process" value="wire"><span class="pick__code">EDM-07</span><span class="pick__name" data-en="Wire EDM" data-zh="线切割">Wire EDM</span></label>
+            <label class="pick"><input type="radio" name="process" value="sinker"><span class="pick__code">EDM-08</span><span class="pick__name" data-en="Sinker EDM" data-zh="电火花">Sinker EDM</span></label>
+          </div>
+
+          <div class="grid-2">
+            <label class="field">
+              <span class="field__label"><span data-en="Material" data-zh="材料">Material</span></span>
+              <span class="field__box field__box--select"><select id="materialSelect" aria-label="Material"></select></span>
+            </label>
+            <label class="field">
+              <span class="field__label"><span data-en="Surface finish" data-zh="表面处理">Surface finish</span></span>
+              <span class="field__box field__box--select"><select id="finishSelect" aria-label="Surface finish"></select></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="fset">
+          <legend class="sr">Tolerance class</legend>
+          <div class="fset__head">
+            <span class="fset__num">03</span>
+            <span class="fset__title" data-en="Tolerance class" data-zh="公差等级">Tolerance class</span>
+            <span class="fset__hint" data-en="The single biggest lever on price" data-zh="对价格影响最大的一个选择">The single biggest lever on price</span>
+          </div>
+          <div class="seg" role="radiogroup" aria-label="Tolerance class">
+            <label><input type="radio" name="tol" value="general" checked><span data-en="General &#177;0.10" data-zh="一般 &#177;0.10">General &#177;0.10</span></label>
+            <label><input type="radio" name="tol" value="precision"><span data-en="Precision &#177;0.02" data-zh="精密 &#177;0.02">Precision &#177;0.02</span></label>
+            <label><input type="radio" name="tol" value="high"><span data-en="High &#177;0.005" data-zh="高精密 &#177;0.005">High &#177;0.005</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="fset">
+          <legend class="sr">Quantity and lead time</legend>
+          <div class="fset__head">
+            <span class="fset__num">04</span>
+            <span class="fset__title" data-en="Quantity &amp; lead time" data-zh="数量与交期">Quantity &amp; lead time</span>
+            <span class="fset__hint" data-en="Set-up is amortised, so quantity matters" data-zh="开机费按批量摊销，数量影响很大">Set-up is amortised, so quantity matters</span>
+          </div>
+          <div class="grid-2">
+            <label class="field">
+              <span class="field__label"><span data-en="Pieces" data-zh="数量">Pieces</span></span>
+              <span class="field__box"><input type="number" id="qty" value="10" min="1" max="100000" step="1" inputmode="numeric"><span class="field__suffix">pcs</span></span>
+              <span class="field__err" data-en="Order 1 to 100,000 pieces." data-zh="请填 1 到 100,000 件。">Order 1 to 100,000 pieces.</span>
+              <span class="row" style="gap:var(--sp-2);margin-top:var(--sp-3)">
+                <button type="button" class="chip chip--tap" data-qty="1">1</button>
+                <button type="button" class="chip chip--tap" data-qty="10">10</button>
+                <button type="button" class="chip chip--tap" data-qty="50">50</button>
+                <button type="button" class="chip chip--tap" data-qty="200">200</button>
+                <button type="button" class="chip chip--tap" data-qty="1000">1000</button>
+              </span>
+            </label>
+            <div class="field">
+              <span class="field__label"><span data-en="Lead time" data-zh="交期">Lead time</span></span>
+              <div class="seg seg--stack" role="radiogroup" aria-label="Lead time">
+                <label><input type="radio" name="rush" value="standard" checked><span data-en="Standard · 8&#8211;12 days" data-zh="标准 · 8&#8211;12 天">Standard · 8&#8211;12 days</span></label>
+                <label><input type="radio" name="rush" value="rush"><span data-en="Fast track · 4&#8211;6 days" data-zh="加急 · 4&#8211;6 天">Fast track · 4&#8211;6 days</span></label>
+                <label><input type="radio" name="rush" value="express"><span data-en="Express · 48 hours" data-zh="特急 · 48 小时">Express · 48 hours</span></label>
+              </div>
+              <p class="xs" style="margin-top:var(--sp-2)" data-en="Ex-works Wuxi, near Shanghai. Add 2&#8211;4 weeks for sea freight, or 3&#8211;5 days by air express."
+                 data-zh="无锡工厂交货（近上海）。海运另加 2&#8211;4 周，空运快件 3&#8211;5 天。">Ex-works Wuxi, near Shanghai. Add 2&#8211;4 weeks for sea freight, or 3&#8211;5 days by air express.</p>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- ── Readout ──────────────────────────────────────────────────── -->
+      <aside class="readout is-pending" id="readout" aria-live="polite">
+        <div class="readout__head">
+          <span class="eyebrow" data-en="Reference price" data-zh="工程参考价">Reference price</span>
+          <span class="chip" id="currencyChip">USD</span>
+        </div>
+
+        <div class="readout__price">
+          <span class="readout__amount"><span class="cur" id="curSym">$</span><span id="priceVal">—</span></span>
+          <span class="xs" id="priceMeta" data-en="per piece · fill in the four steps" data-zh="单件价 · 请填完上面四步">per piece · fill in the four steps</span>
+        </div>
+
+        <div class="readout__grid">
+          <span class="readout__cell"><span class="readout-cell__k" data-en="Batch total" data-zh="批量总价">Batch total</span><span class="readout-cell__v" id="rBatch">—</span></span>
+          <span class="readout__cell"><span class="readout-cell__k" data-en="Lead time" data-zh="交期">Lead time</span><span class="readout-cell__v" id="rLead">—</span></span>
+          <span class="readout__cell"><span class="readout-cell__k" data-en="Cycle / piece" data-zh="单件工时">Cycle / piece</span><span class="readout-cell__v" id="rCycle">—</span></span>
+          <span class="readout__cell"><span class="readout-cell__k" data-en="Part weight" data-zh="零件重量">Part weight</span><span class="readout-cell__v" id="rWeight">—</span></span>
+          <span class="readout__cell"><span class="readout-cell__k" data-en="Material removal" data-zh="材料去除量">Material removal</span><span class="readout-cell__v" id="rRemoval">—</span></span>
+          <span class="readout__cell"><span class="readout-cell__k" data-en="Quote number" data-zh="报价编号">Quote number</span><span class="readout-cell__v" id="rQuoteId">—</span></span>
+        </div>
+
+        <div class="bars" id="bars" hidden>
+          <span class="eyebrow" data-en="Where the money goes" data-zh="成本构成">Where the money goes</span>
+          <div id="barsBody"></div>
+        </div>
+
+        <div id="dfm" hidden>
+          <span class="eyebrow" data-en="DFM watchlist" data-zh="DFM 提示">DFM watchlist</span>
+          <div id="dfmBody" class="dfm" style="margin-top:var(--sp-3)"></div>
+        </div>
+
+        <div class="readout__actions">
+          <button class="btn btn--primary btn--block" type="button" id="toRfq">
+            <span data-en="Send this to an engineer" data-zh="发给工程师核价">Send this to an engineer</span>
+            <svg class="btn__arrow" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h11M9 3.5L13.5 8 9 12.5"/></svg>
+          </button>
+          <div class="row" style="gap:var(--sp-2);flex-wrap:nowrap">
+            <button class="btn btn--ghost btn--sm" type="button" id="printBtn" style="flex:1 1 0">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6V2h8v4M4 12H2.5V6h11v6H12M4 10h8v4H4z"/></svg>
+              <span data-en="Print / save" data-zh="打印 / 存 PDF">Print / save</span>
+            </button>
+            <button class="btn btn--ghost btn--sm" type="button" id="copyBtn" style="flex:1 1 0">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="9" rx="1.6"/><path d="M10.5 3.5V2.6A1.1 1.1 0 0 0 9.4 1.5H3.6A1.1 1.1 0 0 0 2.5 2.6v7.9a1.1 1.1 0 0 0 1.1 1.1h1"/></svg>
+              <span data-en="Copy summary" data-zh="复制摘要">Copy summary</span>
+            </button>
+          </div>
+          <p class="readout__legal" data-en="An engineering reference price built from your geometry and our machine rates. It is not an offer, it excludes tax and freight, and an engineer will confirm or correct it within one working day. Valid 14 days."
+             data-zh="这是依据你的几何信息和我们的机时费率算出的工程参考价，不构成要约，不含税费与运费。工程师会在一个工作日内确认或修正。有效期 14 天。">An engineering reference price built from your geometry and our machine rates. It is not an offer, it excludes tax and freight, and an engineer will confirm or correct it within one working day. Valid 14 days.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     03 · CAPABILITIES — asymmetric grid, not six identical cards
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section" id="capabilities" aria-labelledby="capsTitle">
+  <div class="shell shell--wide">
+    <div class="sechead reveal">
+      <div class="sechead__top">
+        <span class="eyebrow" data-en="02 — Capabilities" data-zh="02 — 工艺能力">02 — Capabilities</span>
+        <span class="sechead__rule"></span>
+      </div>
+      <h2 class="d2" id="capsTitle" data-en="Six ways to make the same part. We pick the one that holds."
+          data-zh="同一个零件有六种做法。我们选那个能稳定做到的。">Six ways to make the same part. We pick the one that holds.</h2>
+      <p class="lead" data-en="The process is not a preference, it is a consequence of the drawing: how tight, how thin, how hard, how many."
+         data-zh="工艺不是偏好，而是图纸的必然结果：多紧、多薄、多硬、多少个。">The process is not a preference, it is a consequence of the drawing: how tight, how thin, how hard, how many.</p>
+    </div>
+
+    <div class="caps stagger">
+      <article class="cap reveal">
+        <span class="cap__code">CNC-01</span>
+        <h3 class="cap__name" data-en="3-axis milling" data-zh="三轴铣削">3-axis milling</h3>
+        <p class="cap__body" data-en="Plates, housings and brackets up to 800 × 500 × 400 mm. VMC with a 24-tool magazine, rigid enough to hold stainless without chattering."
+           data-zh="板件、壳体、支架，最大 800 × 500 × 400 mm。立式加工中心配 24 刀库，刚性足以稳定加工不锈钢而不振刀。">Plates, housings and brackets up to 800 × 500 × 400 mm. VMC with a 24-tool magazine, rigid enough to hold stainless without chattering.</p>
+        <div class="cap__spec"><span>&#177;0.02 mm</span><span>Ra 0.8</span></div>
+      </article>
+
+      <article class="cap reveal">
+        <span class="cap__code">CNC-02</span>
+        <h3 class="cap__name" data-en="Turn-mill" data-zh="车铣复合">Turn-mill</h3>
+        <p class="cap__body" data-en="Shafts, fittings and bushings with cross-drilled holes and milled flats in one set-up — which is the only way concentricity actually holds."
+           data-zh="带径向孔与铣削平面的轴、接头、衬套，一次装夹完成 —— 这是同轴度真正能保住的唯一做法。">Shafts, fittings and bushings with cross-drilled holes and milled flats in one set-up — which is the only way concentricity actually holds.</p>
+        <div class="cap__spec"><span>&#216;2–120 mm</span><span>&#177;0.01 mm</span></div>
+      </article>
+
+      <article class="cap reveal">
+        <span class="cap__code">CNC-03</span>
+        <h3 class="cap__name" data-en="5-axis simultaneous" data-zh="五轴联动">5-axis simultaneous</h3>
+        <p class="cap__body" data-en="Impellers, medical housings, five-face work in a single set-up — for the parts where re-fixturing would eat the tolerance you paid for."
+           data-zh="叶轮、医疗壳体、一次装夹完成五面加工 —— 那些一旦二次装夹就会吃掉公差的零件。">Impellers, medical housings, five-face work in a single set-up — for the parts where re-fixturing would eat the tolerance you paid for.</p>
+        <div class="cap__spec"><span>&#177;0.005 mm</span><span>Ra 0.4</span></div>
+      </article>
+
+      <article class="cap cap--half reveal">
+        <span class="cap__code">SHT-04</span>
+        <h3 class="cap__name" data-en="Sheet metal" data-zh="钣金">Sheet metal</h3>
+        <p class="cap__body" data-en="Laser cutting to 12 mm carbon steel, CNC bending, inserts and hardware pressed in before finishing — so nothing has to be re-opened afterwards."
+           data-zh="碳钢激光切割至 12 mm、数控折弯、压铆与五金件在处理前装好 —— 做完之后不必再开孔。">Laser cutting to 12 mm carbon steel, CNC bending, inserts and hardware pressed in before finishing — so nothing has to be re-opened afterwards.</p>
+        <div class="cap__spec"><span>&#177;0.1 mm</span><span>6000 mm bed</span></div>
+      </article>
+
+      <article class="cap cap--half reveal">
+        <span class="cap__code">EDM-05</span>
+        <h3 class="cap__name" data-en="Wire &amp; sinker EDM" data-zh="线切割与电火花">Wire &amp; sinker EDM</h3>
+        <p class="cap__body" data-en="Hardened tool steel, sharp internal corners, deep ribs — the cuts a rotating cutter physically cannot reach. Micro-holes from &#216;0.3 mm."
+           data-zh="淬硬模具钢、尖锐内角、深窄筋 —— 旋转刀具物理上到不了的切削。最小可加工 &#216;0.3 mm 微孔。">Hardened tool steel, sharp internal corners, deep ribs — the cuts a rotating cutter physically cannot reach. Micro-holes from &#216;0.3 mm.</p>
+        <div class="cap__spec"><span>&#177;0.005 mm</span><span>Ra 0.4</span></div>
+      </article>
+
+      <article class="cap cap--full cap--feature reveal">
+        <div class="cap__inner">
+          <div class="stack-3">
+            <span class="cap__code">SYS-06</span>
+            <h3 class="cap__name d3" data-en="Non-standard equipment" data-zh="非标设备定制">Non-standard equipment</h3>
+            <p class="cap__body" data-en="Fixtures, automation cells and special-purpose machines built from your drawing — mechanical design, machining, assembly and acceptance testing under one roof. This line is quoted by engineers, not by a form."
+               data-zh="按图定制工装夹具、自动化工作站与专用设备 —— 机械设计、加工、装配、验收测试在同一屋檐下完成。这条业务由工程师报价，不由表单报价。">Fixtures, automation cells and special-purpose machines built from your drawing — mechanical design, machining, assembly and acceptance testing under one roof. This line is quoted by engineers, not by a form.</p>
+            <a class="btn btn--sm" href="equipment.html" style="justify-self:start;border-color:currentColor;color:inherit">
+              <span data-en="How we scope a machine" data-zh="我们如何做方案">How we scope a machine</span>
+              <svg class="btn__arrow" width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h11M9 3.5L13.5 8 9 12.5"/></svg>
+            </a>
+          </div>
+          <ul class="cap__list">
+            <li><b>G0</b><span data-en="Requirements clarification — we write down the capacity target, the acceptance test and the hard constraints before anything is drawn."
+                       data-zh="需求澄清 —— 在画图之前，先把产能目标、验收标准和硬约束写下来。">Requirements clarification — we write down the capacity target, the acceptance test and the hard constraints before anything is drawn.</span></li>
+            <li><b>G1</b><span data-en="Concept review — you approve cycle time and layout, or we do not proceed."
+                       data-zh="方案评审 —— 你确认节拍与布局，否则不进入下一步。">Concept review — you approve cycle time and layout, or we do not proceed.</span></li>
+            <li><b>G2</b><span data-en="Design freeze — drawings and BOM signed off. After this, changes go through a written ECR."
+                       data-zh="设计冻结 —— 图纸与 BOM 签字确认。此后任何变更都走书面 ECR。">Design freeze — drawings and BOM signed off. After this, changes go through a written ECR.</span></li>
+            <li><b>G3</b><span data-en="FAT and SAT — it passes on our floor, then it passes on yours."
+                       data-zh="厂内验收与现场验收 —— 先在我们车间通过，再在你们现场通过。">FAT and SAT — it passes on our floor, then it passes on yours.</span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     04 · MATERIALS
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section section--deep" id="materials" aria-labelledby="matTitle">
+  <div class="shell shell--wide">
+    <div class="sechead reveal">
+      <div class="sechead__top">
+        <span class="eyebrow" data-en="03 — Stock &amp; tolerance" data-zh="03 — 常备材料与公差">03 — Stock &amp; tolerance</span>
+        <span class="sechead__rule"></span>
+      </div>
+      <h2 class="d2" id="matTitle" data-en="What we keep on the shelf, and what it can hold."
+          data-zh="我们常备什么，以及它能做到多准。">What we keep on the shelf, and what it can hold.</h2>
+      <p class="lead" data-en="If your grade is not here, ask — it is usually a three to seven day sourcing question, not a refusal."
+         data-zh="如果这里没有你的牌号，问一句 —— 通常只是 3 到 7 天的采购问题，不是拒绝。">If your grade is not here, ask — it is usually a three to seven day sourcing question, not a refusal.</p>
+    </div>
+
+    <div class="tablewrap reveal">
+      <table class="table">
+        <caption class="sr">Material properties and achievable tolerances</caption>
+        <thead>
+          <tr>
+            <th scope="col" data-en="Material" data-zh="材料">Material</th>
+            <th scope="col" data-en="Density" data-zh="密度">Density</th>
+            <th scope="col" data-en="Tensile" data-zh="抗拉强度">Tensile</th>
+            <th scope="col" data-en="Best finish" data-zh="最佳表面">Best finish</th>
+            <th scope="col" data-en="Typical use" data-zh="典型用途">Typical use</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="m">Al 6061-T6</td><td class="m" data-th="Density">2.70 g/cm³</td><td class="m" data-th="Tensile">310 MPa</td>
+            <td class="grade" data-th="Finish">Ra 0.8</td>
+            <td data-th="Use" data-en="Enclosures, brackets, vacuum parts" data-zh="机壳、支架、真空腔体件">Enclosures, brackets, vacuum parts</td>
+          </tr>
+          <tr>
+            <td class="m">Al 7075-T6</td><td class="m" data-th="Density">2.81 g/cm³</td><td class="m" data-th="Tensile">572 MPa</td>
+            <td class="grade" data-th="Finish">Ra 0.8</td>
+            <td data-th="Use" data-en="Aerospace structure, high-load fittings" data-zh="航空结构件、高载荷接头">Aerospace structure, high-load fittings</td>
+          </tr>
+          <tr>
+            <td class="m">SUS 304</td><td class="m" data-th="Density">7.93 g/cm³</td><td class="m" data-th="Tensile">520 MPa</td>
+            <td class="grade" data-th="Finish">Ra 0.8</td>
+            <td data-th="Use" data-en="Food equipment, general corrosion duty" data-zh="食品设备、一般耐蚀场合">Food equipment, general corrosion duty</td>
+          </tr>
+          <tr>
+            <td class="m">SUS 316L</td><td class="m" data-th="Density">8.00 g/cm³</td><td class="m" data-th="Tensile">485 MPa</td>
+            <td class="grade" data-th="Finish">Ra 0.4</td>
+            <td data-th="Use" data-en="Pharma, marine, chloride exposure" data-zh="医药、海洋、氯离子环境">Pharma, marine, chloride exposure</td>
+          </tr>
+          <tr>
+            <td class="m">Carbon steel 1045</td><td class="m" data-th="Density">7.85 g/cm³</td><td class="m" data-th="Tensile">600 MPa</td>
+            <td class="grade" data-th="Finish">Ra 1.6</td>
+            <td data-th="Use" data-en="Shafts, gears, jigs" data-zh="轴类、齿轮、工装">Shafts, gears, jigs</td>
+          </tr>
+          <tr>
+            <td class="m">Brass H62</td><td class="m" data-th="Density">8.50 g/cm³</td><td class="m" data-th="Tensile">370 MPa</td>
+            <td class="grade" data-th="Finish">Ra 0.4</td>
+            <td data-th="Use" data-en="Electrical contacts, fittings, valves" data-zh="电接触件、接头、阀体">Electrical contacts, fittings, valves</td>
+          </tr>
+          <tr>
+            <td class="m">Ti-6Al-4V</td><td class="m" data-th="Density">4.43 g/cm³</td><td class="m" data-th="Tensile">950 MPa</td>
+            <td class="grade" data-th="Finish">Ra 0.8</td>
+            <td data-th="Use" data-en="Medical implants, UAV, chemical plant" data-zh="医疗植入体、无人机、化工设备">Medical implants, UAV, chemical plant</td>
+          </tr>
+          <tr>
+            <td class="m" data-en="Engineering plastics" data-zh="工程塑料">Engineering plastics</td>
+            <td class="m" data-th="Density">1.0–1.4 g/cm³</td><td class="m" data-th="Tensile">—</td>
+            <td class="grade" data-th="Finish">Ra 0.8</td>
+            <td data-th="Use" data-en="POM / PEEK / ABS insulators and wear parts" data-zh="POM / PEEK / ABS 绝缘件与耐磨件">POM / PEEK / ABS insulators and wear parts</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="xs reveal" style="margin-top:var(--sp-5)" data-en="Castings, forgings and exotic grades are sourced on request — lead time extends by three to seven days."
+       data-zh="铸件、锻件与特殊牌号可按需采购 —— 交期相应延长 3 到 7 天。">Castings, forgings and exotic grades are sourced on request — lead time extends by three to seven days.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     05 · PROCESS
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section" id="process" aria-labelledby="procTitle">
+  <div class="shell shell--wide">
+    <div class="sechead reveal">
+      <div class="sechead__top">
+        <span class="eyebrow" data-en="04 — How it runs" data-zh="04 — 流程">04 — How it runs</span>
+        <span class="sechead__rule"></span>
+      </div>
+      <h2 class="d2" id="procTitle" data-en="From your upload to your dock, in six moves."
+          data-zh="从你上传文件，到货到你码头，六步。">From your upload to your dock, in six moves.</h2>
+      <p class="lead" data-en="The only step that needs you is step one. Everything after it is our problem until step six, and then it is your dock's."
+         data-zh="需要你参与的只有第一步。之后的一切都是我们的问题，直到第六步变成你码头的问题。">The only step that needs you is step one. Everything after it is our problem until step six, and then it is your dock's.</p>
+    </div>
+
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step__num">01</span>
+        <span class="step__name" data-en="You upload or type it" data-zh="你上传或手填">You upload or type it</span>
+        <span class="step__body" data-en="STL, STEP, IGES, DWG, PDF — or just the envelope and the material." data-zh="STL、STEP、IGES、DWG、PDF —— 或者只给外形尺寸和材料。">STL, STEP, IGES, DWG, PDF — or just the envelope and the material.</span>
+        <span class="step__bar"><i></i></span>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">02</span>
+        <span class="step__name" data-en="Reference price in seconds" data-zh="几秒出参考价">Reference price in seconds</span>
+        <span class="step__body" data-en="The cost model runs locally. You see the breakdown and the DFM watchlist immediately." data-zh="成本模型在本地运算，立刻给出成本构成与 DFM 提示。">The cost model runs locally. You see the breakdown and the DFM watchlist immediately.</span>
+        <span class="step__bar"><i></i></span>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">03</span>
+        <span class="step__name" data-en="An engineer reads the drawing" data-zh="工程师读图">An engineer reads the drawing</span>
+        <span class="step__body" data-en="Within one working day: a firm price, the risks we can see, and whether that tolerance is worth paying for." data-zh="一个工作日内：正式价格、我们能看到的工艺风险，以及那个公差是否值得花钱。">Within one working day: a firm price, the risks we can see, and whether that tolerance is worth paying for.</span>
+        <span class="step__bar"><i></i></span>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">04</span>
+        <span class="step__name" data-en="First article, then batch" data-zh="先做首件，再做批量">First article, then batch</span>
+        <span class="step__body" data-en="First article with a dimensional report. Nothing runs in volume until you have signed it off." data-zh="首件附尺寸检测报告。在你签字确认之前，不会批量投产。">First article with a dimensional report. Nothing runs in volume until you have signed it off.</span>
+        <span class="step__bar"><i></i></span>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">05</span>
+        <span class="step__name" data-en="Production &amp; inspection" data-zh="生产与检测">Production &amp; inspection</span>
+        <span class="step__body" data-en="In-process checks plus CMM verification on critical features. The report ships with the parts." data-zh="过程检加上关键尺寸的三次元验证。检测报告随货发出。">In-process checks plus CMM verification on critical features. The report ships with the parts.</span>
+        <span class="step__bar"><i></i></span>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">06</span>
+        <span class="step__name" data-en="Packed and shipped" data-zh="包装与发运">Packed and shipped</span>
+        <span class="step__body" data-en="Export packing, FOB or CIF, air express or sea. Documents handled — no surprises at the border." data-zh="出口包装，FOB 或 CIF，空运或海运。单证我们处理，不让它在海关出意外。">Export packing, FOB or CIF, air express or sea. Documents handled — no surprises at the border.</span>
+        <span class="step__bar"><i></i></span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     06 · QUALITY
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section s-dark" id="quality" aria-labelledby="qcTitle">
+  <div class="shell shell--wide">
+    <div class="quality__grid">
+      <div class="reveal">
+        <div class="sechead__top" style="margin-bottom:var(--sp-5)">
+          <span class="eyebrow" data-en="05 — Quality control" data-zh="05 — 品质控制">05 — Quality control</span>
+          <span class="sechead__rule"></span>
+        </div>
+        <h2 class="d2" id="qcTitle" data-en="Checked before it is shipped, not after you complain."
+            data-zh="出货前检查，而不是等你投诉之后。">Checked before it is shipped, not after you complain.</h2>
+        <p class="body" style="margin-top:var(--sp-5)" data-en="A tolerance claim is only worth what the inspection behind it is worth. Every export order leaves with a dimensional report and a material certificate, and critical features are verified on a coordinate measuring machine rather than with a caliper."
+           data-zh="一个公差承诺的价值，取决于它背后的检测手段。每一批出口订单都附尺寸报告与材质证明，关键尺寸用三次元测量，而不是卡尺。">A tolerance claim is only worth what the inspection behind it is worth. Every export order leaves with a dimensional report and a material certificate, and critical features are verified on a coordinate measuring machine rather than with a caliper.</p>
+
+        <ul class="quality__list">
+          <li class="qitem">
+            <span class="qitem__tick" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5l3.4 3.4L13.5 4"/></svg></span>
+            <span class="qitem__txt"><b data-en="First article inspection report" data-zh="首件检测报告">First article inspection report</b>
+              <span data-en="with every batch" data-zh="随每一批发出">with every batch</span></span>
+          </li>
+          <li class="qitem">
+            <span class="qitem__tick" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5l3.4 3.4L13.5 4"/></svg></span>
+            <span class="qitem__txt"><b data-en="Material mill certificate" data-zh="材质证明书">Material mill certificate</b>
+              <span data-en="traceable to the heat number" data-zh="可追溯至炉号">traceable to the heat number</span></span>
+          </li>
+          <li class="qitem">
+            <span class="qitem__tick" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5l3.4 3.4L13.5 4"/></svg></span>
+            <span class="qitem__txt"><b data-en="CMM verification" data-zh="三次元验证">CMM verification</b>
+              <span data-en="on every critical feature" data-zh="覆盖所有关键尺寸">on every critical feature</span></span>
+          </li>
+          <li class="qitem">
+            <span class="qitem__tick" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5l3.4 3.4L13.5 4"/></svg></span>
+            <span class="qitem__txt"><b data-en="Surface finish and hardness checks" data-zh="表面粗糙度与硬度检测">Surface finish and hardness checks</b>
+              <span data-en="on request" data-zh="按需提供">on request</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="qstats stagger">
+        <div class="qstat reveal">
+          <span class="qstat__v"><span class="count" data-to="0.005" data-dec="3">0.005</span><span>mm</span></span>
+          <span class="qstat__k" data-en="Best achievable, five-axis" data-zh="五轴可稳定达到">Best achievable, five-axis</span>
+        </div>
+        <div class="qstat reveal">
+          <span class="qstat__v"><span class="count" data-to="12" data-dec="0">12</span><span>&#215;</span></span>
+          <span class="qstat__k" data-en="CNC centres and EDM machines on the floor" data-zh="车间内的加工中心与电火花设备台数">CNC centres and EDM machines on the floor</span>
+        </div>
+        <div class="qstat reveal">
+          <span class="qstat__v"><span class="count" data-to="100" data-dec="0">100</span><span>%</span></span>
+          <span class="qstat__k" data-en="Of export orders inspected before packing" data-zh="出口订单在包装前完成检测的比例">Of export orders inspected before packing</span>
+        </div>
+        <div class="qstat reveal">
+          <span class="qstat__v"><span class="count" data-to="16" data-dec="0">16</span><span>yr</span></span>
+          <span class="qstat__k" data-en="Quoting export work" data-zh="承接出口订单的年限">Quoting export work</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     07 · EQUIPMENT — the other half of the business, which the site had
+     no landing place for until now
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section" id="equipment" aria-labelledby="eqTitle">
+  <div class="shell shell--wide">
+    <div class="teaser reveal">
+      <div class="stack">
+        <div class="sechead__top">
+          <span class="eyebrow" data-en="06 — Non-standard equipment" data-zh="06 — 非标设备">06 — Non-standard equipment</span>
+          <span class="sechead__rule"></span>
+        </div>
+        <h2 class="d2" id="eqTitle" data-en="Half of what we build is not a part."
+            data-zh="我们做的东西，有一半不是零件。">Half of what we build is not a part.</h2>
+        <p class="body" data-en="Fixtures, automation cells, special-purpose machines. You are not buying a machine — you are buying a cycle time that has to be met. So we do not put a price on this line from a form: we write down your capacity target and your acceptance test first, and then quote."
+           data-zh="工装夹具、自动化工作站、专用设备。你买的不是一台机器，而是一个必须被达成的节拍。所以这条业务不由表单报价：我们先写下你的产能目标和验收标准，再报价。">Fixtures, automation cells, special-purpose machines. You are not buying a machine — you are buying a cycle time that has to be met. So we do not put a price on this line from a form: we write down your capacity target and your acceptance test first, and then quote.</p>
+        <div class="row">
+          <a class="btn btn--solid" href="equipment.html">
+            <span data-en="Scope a machine with an engineer" data-zh="和工程师一起做方案">Scope a machine with an engineer</span>
+            <svg class="btn__arrow" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h11M9 3.5L13.5 8 9 12.5"/></svg>
+          </a>
+          <span class="chip" data-en="Free clarification review · 48 h" data-zh="免费需求澄清评审 · 48 小时">Free clarification review · 48 h</span>
+        </div>
+      </div>
+
+      <div class="gates">
+        <div class="gate">
+          <span class="gate__id">G0</span>
+          <span class="gate__name" data-en="Requirements clarification" data-zh="需求澄清">Requirements clarification</span>
+          <span class="gate__out" data-en="≤ 48 h" data-zh="≤ 48 小时">≤ 48 h</span>
+        </div>
+        <div class="gate">
+          <span class="gate__id">G1</span>
+          <span class="gate__name" data-en="Concept &amp; cycle-time review" data-zh="方案与节拍评审">Concept &amp; cycle-time review</span>
+          <span class="gate__out" data-en="Layout + budget" data-zh="布局 + 预算区间">Layout + budget</span>
+        </div>
+        <div class="gate">
+          <span class="gate__id">G2</span>
+          <span class="gate__name" data-en="Design freeze" data-zh="设计冻结">Design freeze</span>
+          <span class="gate__out" data-en="Drawings + BOM" data-zh="图纸 + BOM">Drawings + BOM</span>
+        </div>
+        <div class="gate">
+          <span class="gate__id">G3</span>
+          <span class="gate__name" data-en="FAT, then SAT" data-zh="厂内验收，再到现场验收">FAT, then SAT</span>
+          <span class="gate__out" data-en="Signed protocol" data-zh="签字验收记录">Signed protocol</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     08 · FAQ
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section section--tight" id="faq" aria-labelledby="faqTitle">
+  <div class="shell shell--wide">
+    <div class="sechead reveal">
+      <div class="sechead__top">
+        <span class="eyebrow" data-en="07 — Before you ask" data-zh="07 — 在你问之前">07 — Before you ask</span>
+        <span class="sechead__rule"></span>
+      </div>
+      <h2 class="d2" id="faqTitle" data-en="The questions that decide whether we get the order."
+          data-zh="决定这单给不给我们的，是这几个问题。">The questions that decide whether we get the order.</h2>
+      <p class="lead" data-en="If yours is not here, put it in the message box — an engineer answers it, not a sales script."
+         data-zh="如果没有你的问题，写进下面的留言框 —— 回答你的是工程师，不是话术。">If yours is not here, put it in the message box — an engineer answers it, not a sales script.</p>
+    </div>
+
+    <div class="faq reveal">
+      <details class="acc">
+        <summary>
+          <span data-en="Is the instant price the final price?" data-zh="在线算出来的价格是最终价吗？">Is the instant price the final price?</span>
+          <span class="acc__sign" aria-hidden="true"></span>
+        </summary>
+        <div class="acc__panel"><div><div class="acc__body">
+          <p data-en="No — and treat any tool that says otherwise with suspicion. It is a reference price built from your geometry and our machine rates. After an engineer reads the drawing it moves. Usually down, because the model has to assume a conservative set-up. Occasionally up, if a feature needs a second set-up or a custom cutter."
+             data-zh="不是 —— 任何声称「秒报价就是最终价」的工具，你都该警惕。它是依据你的几何信息和我们的机时费率算出的参考价。工程师读图之后它会有变化：通常是变低，因为模型必须保守假设装夹方式；偶尔变高，如果某个特征需要二次装夹或定制刀具。">No — and treat any tool that says otherwise with suspicion. It is a reference price built from your geometry and our machine rates. After an engineer reads the drawing it moves. Usually down, because the model has to assume a conservative set-up. Occasionally up, if a feature needs a second set-up or a custom cutter.</p>
+        </div></div></div>
+      </details>
+
+      <details class="acc">
+        <summary>
+          <span data-en="Do you sign an NDA?" data-zh="你们签保密协议吗？">Do you sign an NDA?</span>
+          <span class="acc__sign" aria-hidden="true"></span>
+        </summary>
+        <div class="acc__panel"><div><div class="acc__body">
+          <p data-en="Yes, before you send anything you consider sensitive. Say so in the message box and it comes back countersigned. If a drawing is confidential, send the envelope and the material first — that is enough for a first price, and it identifies nothing."
+             data-zh="签，在你发送任何你认为敏感的东西之前。在留言里说明，我们会签好回传。如果图纸本身涉密，先给外形尺寸和材料 —— 足够出第一版价格，而且不暴露任何信息。">Yes, before you send anything you consider sensitive. Say so in the message box and it comes back countersigned. If a drawing is confidential, send the envelope and the material first — that is enough for a first price, and it identifies nothing.</p>
+        </div></div></div>
+      </details>
+
+      <details class="acc">
+        <summary>
+          <span data-en="What is the smallest order you accept?" data-zh="最小订单量是多少？">What is the smallest order you accept?</span>
+          <span class="acc__sign" aria-hidden="true"></span>
+        </summary>
+        <div class="acc__panel"><div><div class="acc__body">
+          <p data-en="One piece. Prototypes are how most of our export accounts started. The unit price is just higher, because the set-up is carried by one part instead of two hundred — which is exactly what the cost breakdown in the engine is showing you."
+             data-zh="一件也做。我们大部分出口客户都是从一个样件开始的。只是单价更高，因为开机费由一件承担，而不是两百件 —— 这正是上面报价引擎里那张成本构成在告诉你的东西。">One piece. Prototypes are how most of our export accounts started. The unit price is just higher, because the set-up is carried by one part instead of two hundred — which is exactly what the cost breakdown in the engine is showing you.</p>
+        </div></div></div>
+      </details>
+
+      <details class="acc">
+        <summary>
+          <span data-en="Which files can you actually read?" data-zh="你们能直接读哪些文件？">Which files can you actually read?</span>
+          <span class="acc__sign" aria-hidden="true"></span>
+        </summary>
+        <div class="acc__panel"><div><div class="acc__body">
+          <p data-en="STEP and IGES give the cleanest results. STL and OBJ are fine for estimating but carry no tolerance information — they are just a skin. Native SolidWorks, Inventor or DWG files we can also open. A PDF drawing with dimensions is enough if that is all you have."
+             data-zh="STEP 和 IGES 效果最干净。STL 和 OBJ 可以估算，但不携带任何公差信息 —— 它只是一层皮。原生 SolidWorks、Inventor、DWG 我们也能打开。如果你手上只有带尺寸标注的 PDF 图纸，那也够。">STEP and IGES give the cleanest results. STL and OBJ are fine for estimating but carry no tolerance information — they are just a skin. Native SolidWorks, Inventor or DWG files we can also open. A PDF drawing with dimensions is enough if that is all you have.</p>
+        </div></div></div>
+      </details>
+
+      <details class="acc">
+        <summary>
+          <span data-en="How do you handle shipping and terms?" data-zh="运输和付款条件怎么谈？">How do you handle shipping and terms?</span>
+          <span class="acc__sign" aria-hidden="true"></span>
+        </summary>
+        <div class="acc__panel"><div><div class="acc__body">
+          <p data-en="Ex-works, FOB Shanghai or CIF — your call. Air express for anything urgent, sea for volume. Payment terms start at 30% deposit for new accounts and loosen after a few orders. We are not precious about it."
+             data-zh="工厂交货、FOB 上海、CIF 都可以，你定。急件走空运快件，大批量走海运。新客户从 30% 定金开始，合作几单之后可以放宽。这方面我们不较劲。">Ex-works, FOB Shanghai or CIF — your call. Air express for anything urgent, sea for volume. Payment terms start at 30% deposit for new accounts and loosen after a few orders. We are not precious about it.</p>
+        </div></div></div>
+      </details>
+
+      <details class="acc">
+        <summary>
+          <span data-en="Can you take over a part another shop keeps getting wrong?" data-zh="别人家一直做不好的零件，你们能接吗？">Can you take over a part another shop keeps getting wrong?</span>
+          <span class="acc__sign" aria-hidden="true"></span>
+        </summary>
+        <div class="acc__panel"><div><div class="acc__body">
+          <p data-en="That is most of what we do. Send the drawing, the failed parts if you still have them, and the inspection report if there is one. Nine times out of ten the problem is the set-up and the fixturing, not the machine."
+             data-zh="这正是我们大部分的工作。把图纸发来，如果你还留着报废件一并寄来，有检测报告也一起。十次里有九次，问题出在装夹和工装上，不在机床。">That is most of what we do. Send the drawing, the failed parts if you still have them, and the inspection report if there is one. Nine times out of ten the problem is the set-up and the fixturing, not the machine.</p>
+        </div></div></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     09 · RFQ — the closed loop. Everything the engine already computed is
+     carried into this form, so the customer retypes nothing technical.
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="section section--deep" id="rfq" aria-labelledby="rfqTitle">
+  <div class="shell shell--wide">
+    <div class="sechead reveal">
+      <div class="sechead__top">
+        <span class="eyebrow" data-en="08 — Contact" data-zh="08 — 联系">08 — Contact</span>
+        <span class="sechead__rule"></span>
+      </div>
+      <h2 class="d2" id="rfqTitle" data-en="Send the drawing. We will send the price."
+          data-zh="把图纸发来。价格我们回给你。">Send the drawing. We will send the price.</h2>
+      <p class="lead" data-en="Four contact fields and a message box. Everything technical has already been carried over from the quote above — you should not have to type it twice."
+         data-zh="四个联系字段加一个留言框。技术参数已经从上面的报价里自动带过来了 —— 你不该重复输入一遍。">Four contact fields and a message box. Everything technical has already been carried over from the quote above — you should not have to type it twice.</p>
+    </div>
+
+    <div class="rfq__grid">
+      <form class="form reveal" id="rfqForm" novalidate>
+        <div class="form__row">
+          <label class="field">
+            <span class="field__label"><span data-en="Your name" data-zh="联系人">Your name</span> <span class="opt" data-en="required" data-zh="必填">required</span></span>
+            <span class="field__box"><input type="text" id="rfqName" name="name" autocomplete="name" placeholder="Jane Doe"></span>
+            <span class="field__err" data-en="We need a name to address the reply to." data-zh="请填写联系人姓名，方便我们回复。">We need a name to address the reply to.</span>
+          </label>
+          <label class="field">
+            <span class="field__label"><span data-en="Company" data-zh="公司">Company</span> <span class="opt" data-en="optional" data-zh="选填">optional</span></span>
+            <span class="field__box"><input type="text" id="rfqCompany" name="company" autocomplete="organization" placeholder="Acme Industrial"></span>
+          </label>
+        </div>
+
+        <div class="form__row">
+          <label class="field">
+            <span class="field__label"><span data-en="Work email" data-zh="工作邮箱">Work email</span> <span class="opt" data-en="required" data-zh="必填">required</span></span>
+            <span class="field__box"><input type="email" id="rfqEmail" name="email" autocomplete="email" placeholder="jane@acme.com"></span>
+            <span class="field__err" data-en="That does not look like an email address." data-zh="这看起来不像一个邮箱地址。">That does not look like an email address.</span>
+          </label>
+          <label class="field">
+            <span class="field__label"><span data-en="Country / region" data-zh="国家 / 地区">Country / region</span> <span class="opt" data-en="required" data-zh="必填">required</span></span>
+            <span class="field__box"><input type="text" id="rfqCountry" name="country" autocomplete="country-name" placeholder="Germany"></span>
+            <span class="field__err" data-en="Freight and duty depend on it — please fill it in." data-zh="运费与关税与此相关，请填写。">Freight and duty depend on it — please fill it in.</span>
+          </label>
+        </div>
+
+        <!-- Carried over from the quote engine -->
+        <div class="carried">
+          <div class="carried__head">
+            <span class="carried__title" data-en="Carried over from your quote" data-zh="已从报价自动带入">Carried over from your quote</span>
+            <span class="chip chip--accent" id="carryId">—</span>
+          </div>
+          <div class="carried__grid">
+            <span class="carried__item"><span class="carried__k" data-en="Process" data-zh="工艺">Process</span><span class="carried__v" data-carry="process" data-empty="true" title="">—</span></span>
+            <span class="carried__item"><span class="carried__k" data-en="Material" data-zh="材料">Material</span><span class="carried__v" data-carry="material" data-empty="true" title="">—</span></span>
+            <span class="carried__item"><span class="carried__k" data-en="Quantity" data-zh="数量">Quantity</span><span class="carried__v" data-carry="qty" data-empty="true" title="">—</span></span>
+            <span class="carried__item"><span class="carried__k" data-en="Tolerance" data-zh="公差">Tolerance</span><span class="carried__v" data-carry="tol" data-empty="true" title="">—</span></span>
+            <span class="carried__item"><span class="carried__k" data-en="Surface finish" data-zh="表面处理">Surface finish</span><span class="carried__v" data-carry="finish" data-empty="true" title="">—</span></span>
+            <span class="carried__item"><span class="carried__k" data-en="Lead time" data-zh="交期">Lead time</span><span class="carried__v" data-carry="rush" data-empty="true" title="">—</span></span>
+            <span class="carried__item"><span class="carried__k" data-en="Reference price" data-zh="参考价">Reference price</span><span class="carried__v" data-carry="price" data-empty="true" title="">—</span></span>
+            <span class="carried__item"><span class="carried__k" data-en="Geometry" data-zh="几何信息">Geometry</span><span class="carried__v" data-carry="geom" data-empty="true" title="">—</span></span>
+            <span class="carried__item"><span class="carried__k" data-en="Source" data-zh="数据来源">Source</span><span class="carried__v" data-carry="source" data-empty="true" title="">—</span></span>
+          </div>
+        </div>
+
+        <label class="field">
+          <span class="field__label"><span data-en="Anything we should know?" data-zh="还有什么我们需要知道的？">Anything we should know?</span></span>
+          <textarea id="rfqNote" name="note" placeholder="Tolerances that matter, an NDA to countersign, a delivery date you have to hit, a failed part you want us to look at…"></textarea>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" id="rfqConsent" name="consent">
+          <span data-en="I agree that this enquiry and the attached geometry summary may be stored and used to answer it. See the privacy notice — nothing is shared with third parties, and you can ask us to delete it."
+                data-zh="我同意你们保存这条询盘及随附的几何摘要，并用于回复。详见隐私说明 —— 我们不会提供给第三方，你也可以随时要求删除。">I agree that this enquiry and the attached geometry summary may be stored and used to answer it. See the privacy notice — nothing is shared with third parties, and you can ask us to delete it.</span>
+        </label>
+
+        <div class="formstatus" id="rfqStatus" role="status" aria-live="polite"></div>
+
+        <div class="row" style="justify-content:space-between">
+          <button class="btn btn--primary btn--lg" type="submit" id="rfqSubmit">
+            <span data-en="Send the enquiry" data-zh="提交询盘">Send the enquiry</span>
+            <svg class="btn__arrow" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h11M9 3.5L13.5 8 9 12.5"/></svg>
+          </button>
+          <span class="xs" data-en="An engineer replies within one working day." data-zh="工程师将在一个工作日内回复。">An engineer replies within one working day.</span>
+        </div>
+
+        <p class="xs" data-en="Demo build: this form validates locally and does not POST anywhere. Point it at your CRM, mail service or form endpoint before going live — see README § Wiring the form."
+           data-zh="演示版本：表单只在本地校验，不会发送到任何地方。上线前请接到你的 CRM、邮件服务或表单端点 —— 见 README「接入表单」一节。">Demo build: this form validates locally and does not POST anywhere. Point it at your CRM, mail service or form endpoint before going live — see README § Wiring the form.</p>
+      </form>
+
+      <div class="aside">
+        <div class="aside__card reveal">
+          <span class="eyebrow" data-en="What happens next" data-zh="接下来会发生什么">What happens next</span>
+          <div class="aside__list">
+            <div class="aside__row">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.4 3.4L13.5 4"/></svg>
+              <span data-en="You get a reference number immediately. Quote it in any later email and we can find this exact enquiry." data-zh="你会立刻拿到一个报价编号。之后任何邮件里引用它，我们都能定位到这条询盘。">You get a reference number immediately. Quote it in any later email and we can find this exact enquiry.</span>
+            </div>
+            <div class="aside__row">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.4 3.4L13.5 4"/></svg>
+              <span data-en="An engineer reads the drawing and returns a firm price, plus anything on the drawing that is going to cost more than it needs to." data-zh="工程师读图后给出正式价格，并指出图纸上「本不必花这么多钱」的地方。">An engineer reads the drawing and returns a firm price, plus anything on the drawing that is going to cost more than it needs to.</span>
+            </div>
+            <div class="aside__row">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.4 3.4L13.5 4"/></svg>
+              <span data-en="No newsletter, no sequence, no follow-up drip. One reply, from a person." data-zh="不发营销邮件、不进自动化序列、不做跟进轰炸。一封回复，来自一个真人。">No newsletter, no sequence, no follow-up drip. One reply, from a person.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="aside__card reveal">
+          <span class="eyebrow" data-en="Or skip the form" data-zh="或者跳过表单">Or skip the form</span>
+          <div class="aside__list">
+            <div class="aside__row">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.8" y="3.2" width="12.4" height="9.6" rx="1.6"/><path d="M2.4 4.2L8 8.6l5.6-4.4"/></svg>
+              <span><a href="mailto:rfq@xdetron.com">rfq@xdetron.com</a><br>
+                <span class="xs" data-en="Put the drawing in the first email — it saves a round trip." data-zh="第一封邮件就把图纸附上 —— 能省一个来回。">Put the drawing in the first email — it saves a round trip.</span></span>
+            </div>
+            <div class="aside__row">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2.5h3l1.4 3.4-1.7 1.3a9 9 0 0 0 4.1 4.1l1.3-1.7L14.5 11v3a1 1 0 0 1-1.1 1A12.4 12.4 0 0 1 2 3.6a1 1 0 0 1 1-1.1z"/></svg>
+              <span><span class="mono"><a href="tel:+8618051938829" style="color:inherit">+86 180 5193 8829</a></span><br>
+                <span class="xs" data-en="Phone &amp; WhatsApp · Mon–Sat, 08:30–20:00 GMT+8." data-zh="电话同微信 · 周一至周六，08:30–20:00（GMT+8）。">Phone &amp; WhatsApp · Mon–Sat, 08:30–20:00 GMT+8.</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="receipt reveal" id="receipt" hidden>
+          <span class="receipt__k" data-en="Enquiry received" data-zh="询盘已收到">Enquiry received</span>
+          <span class="receipt__id" id="receiptId">RFQ-0000-0000</span>
+          <p data-en="Keep this number. An engineer will come back with a firm price and a DFM read within one working day. Nothing was uploaded — the geometry summary travelled with your message."
+             data-zh="请保留这个编号。工程师将在一个工作日内给出正式价格与 DFM 意见。没有任何文件被上传 —— 随消息一起过去的是几何摘要。">Keep this number. An engineer will come back with a firm price and a DFM read within one working day. Nothing was uploaded — the geometry summary travelled with your message.</p>
+          <div class="receipt__rows">
+            <div class="receipt__row"><span data-en="Reference price" data-zh="参考价">Reference price</span><span id="receiptPrice">—</span></div>
+            <div class="receipt__row"><span data-en="Submitted" data-zh="提交时间">Submitted</span><span id="receiptTime">—</span></div>
+            <div class="receipt__row"><span data-en="Reply to" data-zh="回复至">Reply to</span><span id="receiptEmail">—</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="shell shell--wide">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <a class="brand" href="index.html" aria-label="Xdetron Precision Machining">
+          <svg class="brand__mark" width="24" height="24" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="1.2" y="1.2" width="29.6" height="29.6" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M8.5 21.5V11l7.5 5.6L23.5 11v10.5" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span><span class="brand__name">Xdetron</span><span class="brand__sub" data-en="Precision Machining" data-zh="艾得创科技">Precision Machining</span></span>
+        </a>
+        <p class="footer__blurb" data-en="CNC machining, turn-mill, five-axis, sheet metal and EDM for export orders — plus non-standard equipment built to your drawing. One shop, one engineer on your account, from first article to the last carton."
+           data-zh="面向出口订单的 CNC 加工、车铣复合、五轴、钣金与电火花 —— 以及按图定制的非标设备。一间工厂，一位工程师对你负责，从首件到最后一件出货。">CNC machining, turn-mill, five-axis, sheet metal and EDM for export orders — plus non-standard equipment built to your drawing. One shop, one engineer on your account, from first article to the last carton.</p>
+        <p class="xs">
+          <span data-en="Wuxi Xdetron Technology Co., Ltd. · No. 1015 Xinhong Road, Xinwu District, Wuxi, Jiangsu, China"
+                data-zh="无锡艾得创科技有限公司 · 中国江苏省无锡市新吴区新鸿路1015号">Wuxi Xdetron Technology Co., Ltd. · No. 1015 Xinhong Road, Xinwu District, Wuxi, Jiangsu, China</span>
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <span class="footer__h" data-en="Parts" data-zh="零件加工">Parts</span>
+        <nav class="footer__links" aria-label="Parts">
+          <a href="#quote" data-en="Instant quote" data-zh="在线报价">Instant quote</a>
+          <a href="#capabilities" data-en="Capabilities" data-zh="工艺能力">Capabilities</a>
+          <a href="#materials" data-en="Materials" data-zh="材料规格">Materials</a>
+          <a href="#process" data-en="How it runs" data-zh="流程">How it runs</a>
+          <a href="#quality" data-en="Quality control" data-zh="品质控制">Quality control</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <span class="footer__h" data-en="Machines" data-zh="设备定制">Machines</span>
+        <nav class="footer__links" aria-label="Machines">
+          <a href="equipment.html" data-en="Non-standard equipment" data-zh="非标设备定制">Non-standard equipment</a>
+          <a href="equipment.html#scope" data-en="How we scope it" data-zh="我们如何做方案">How we scope it</a>
+          <a href="equipment.html#boundary" data-en="Delivery boundary" data-zh="交付边界">Delivery boundary</a>
+          <a href="equipment.html#enquiry" data-en="Start an enquiry" data-zh="发起需求">Start an enquiry</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <span class="footer__h" data-en="Company" data-zh="公司">Company</span>
+        <nav class="footer__links" aria-label="Company">
+          <a href="#faq" data-en="FAQ" data-zh="常见问题">FAQ</a>
+          <a href="#rfq" data-en="Contact" data-zh="联系方式">Contact</a>
+          <a href="privacy.html" data-en="Privacy &amp; terms" data-zh="隐私与条款">Privacy &amp; terms</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <span>© <span class="nums">2026</span> 无锡艾得创科技有限公司 · Wuxi Xdetron Technology Co., Ltd.
+        <span class="muted" data-en="www.xdetron.com" data-zh="www.xdetron.com">www.xdetron.com</span>
+      </span>
+      <span class="row" style="gap:var(--sp-5)">
+        <a href="privacy.html" data-en="Privacy" data-zh="隐私">Privacy</a>
+        <a href="privacy.html#disclaimer" data-en="Reference prices are not offers" data-zh="参考价不构成要约">Reference prices are not offers</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     PRINT SHEET — only rendered when the customer prints or saves as PDF
+     ═══════════════════════════════════════════════════════════════════ -->
+<section class="sheet" id="sheet" aria-hidden="true">
+  <header class="sheet__head">
+    <div>
+      <div class="sheet__brand" data-en="Xdetron Precision Machining" data-zh="无锡艾得创科技有限公司">Xdetron Precision Machining</div>
+      <div class="sheet__doctype" data-en="Engineering reference quote · not an offer"
+           data-zh="工程参考价 · 不构成要约">Engineering reference quote · not an offer</div>
+    </div>
+    <div class="sheet__meta">
+      <div><b data-en="Quote" data-zh="报价编号">Quote</b> <span id="sId">—</span></div>
+      <div><b data-en="Date" data-zh="日期">Date</b> <span id="sDate">—</span></div>
+      <div><b data-en="Valid" data-zh="有效期">Valid</b> <span id="sValid">—</span></div>
+    </div>
+  </header>
+
+  <div class="sheet__block">
+    <div class="sheet__h" data-en="Part and process" data-zh="零件与工艺">Part and process</div>
+    <div class="sheet__rows" id="sSpecs"></div>
+  </div>
+
+  <div class="sheet__money">
+    <div>
+      <div class="sheet__h" style="border:0;margin:0;padding:0" data-en="Unit price" data-zh="单件价">Unit price</div>
+      <div class="sheet__amount" id="sUnit">—</div>
+    </div>
+    <div style="text-align:right">
+      <div class="sheet__h" style="border:0;margin:0;padding:0" data-en="Batch total" data-zh="批量总价">Batch total</div>
+      <div class="sheet__amount" id="sBatch" style="font-size:17pt">—</div>
+    </div>
+  </div>
+
+  <div class="sheet__block">
+    <div class="sheet__h" data-en="Cost breakdown" data-zh="成本构成">Cost breakdown</div>
+    <table>
+      <thead><tr>
+        <th data-en="Component" data-zh="项目">Component</th>
+        <th style="text-align:right" data-en="Amount" data-zh="金额">Amount</th>
+        <th style="text-align:right" data-en="Share" data-zh="占比">Share</th>
+      </tr></thead>
+      <tbody id="sRows"></tbody>
+    </table>
+  </div>
+
+  <div class="sheet__block">
+    <div class="sheet__h" data-en="Design-for-manufacture notes" data-zh="DFM 可制造性意见">Design-for-manufacture notes</div>
+    <ul class="sheet__dfm" id="sDfm"></ul>
+  </div>
+
+  <div class="sheet__foot" id="sFoot">
+    <span data-en="This document is an engineering reference price produced by a cost model, not a binding offer. It excludes tax, freight and tooling that has not been identified. An engineer will confirm or correct it in writing within one working day of receiving the drawing. Prices are stated in the currency shown and are valid for the period above."
+          data-zh="本文件是由成本模型生成的工程参考价，不构成有约束力的要约。不含税费、运费，以及尚未识别的工装费用。工程师在收到图纸后的一个工作日内会以书面形式确认或修正。价格为所示币种，有效期见上。">This document is an engineering reference price produced by a cost model, not a binding offer. It excludes tax, freight and tooling that has not been identified. An engineer will confirm or correct it in writing within one working day of receiving the drawing. Prices are stated in the currency shown and are valid for the period above.</span>
+  </div>
+</section>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="scripts/stl.js"></script>
+<script src="scripts/occt.js"></script>
+<script src="scripts/quote.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/quote-flow.js"></script>
+</body>
+</html>
